@@ -2,20 +2,10 @@
 <h1>
   {{title}}
 </h1>
-<div *ngFor="let animal of animals" class="panel panel-default">
-  <div class="panel-heading">
-    <h4>Species: {{animal.species}}</h4>
-  </div>
-  <div class="panel-body">
-    <h5>Name: {{animal.name}}</h5>
-    <h5>Age: {{animal.age}}</h5>
-    <h5>Diet: {{animal.diet}}</h5>
-    <h5>Location: {{animal.location}}</h5>
-    <h5>Caretakers: {{animal.caretakers}}</h5>
-    <h5>Sex: {{animal.sex}}</h5>
-    <h5>Likes: {{animal.likes}}</h5>
-    <h5>Dislikes: {{animal.dislikes}}</h5>
-  </div>
+<div *ngFor="let animal of animals" >
+  <view-animal *ngIf="animal!==currentEditAnimal" [animal]="animal" (editAnimalEvent)="editAnimal($event)"></view-animal>
+  <edit-animal *ngIf="animal===currentEditAnimal" [animal]="animal" (saveAnimalEvent)="saveAnimal()"></edit-animal>
 </div>
+
 
 <add-animal (newAnimalEvent)="addAnimal($event)"></add-animal>

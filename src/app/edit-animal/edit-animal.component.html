@@ -1,0 +1,27 @@
+<div class="panel panel-default">
+<div class="panel-heading">
+  <h4>Edit animal</h4>
+</div>
+  <div class="panel-body">
+    <label>Species:</label>
+    <input class="form-control" [(ngModel)]="animal.species">
+    <label>Name:</label>
+    <input class="form-control" [(ngModel)]="animal.name">
+    <label>Age:</label>
+    <input class="form-control" [(ngModel)]="animal.age">
+    <label>Diet:</label>
+    <input class="form-control" [(ngModel)]="animal.diet">
+    <label>Location:</label>
+    <input class="form-control" [(ngModel)]="animal.location">
+    <label>Caretakers:</label>
+    <input class="form-control" [(ngModel)]="animal.caretakers">
+    <label>Sex:</label>
+    <input class="form-control" [(ngModel)]="animal.sex">
+    <label>Likes:</label>
+    <input class="form-control" [(ngModel)]="animal.likes">
+    <label>Disllikes:</label>
+    <input class="form-control" [(ngModel)]="animal.dislikes">
+    <br>
+    <button class="btn btn-success" (click)="saveButtonClicked()">Save</button>
+  </div>
+</div>
