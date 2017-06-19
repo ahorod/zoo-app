@@ -7,12 +7,14 @@ import { Animal } from './animal.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  title = 'ZOO Tracker';
 
   animals: Animal[] = [
-    new Animal('Arctic Fox', 'Moon', 2, 'Carnivore', 'Northern Trail', 5, 'Female', 'Cool shades', 'Loud noises')
+    new Animal('Arctic Fox', 'Moon', 2, 'Carnivore', 'Northern Trail', 5, 'Female', 'Cool shades', 'Loud noises'),
+    new Animal('Ocelot', 'Prince',1,'Carnivore','tropical', 6,'female','Laying in the sunshine','Toys that are not rope-based')
   ];
   currentEditAnimal: Animal = null;
+  filterValue: string  = "all";
 
   addAnimal(animal){
     this.animals.push(animal);
@@ -24,5 +26,8 @@ export class AppComponent {
 
   saveAnimal(){
     this.currentEditAnimal = null;
+  }
+  onFilterChange(value){
+    this.filterValue = value;
   }
 }

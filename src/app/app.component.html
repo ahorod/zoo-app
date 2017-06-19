@@ -2,7 +2,12 @@
 <h1>
   {{title}}
 </h1>
-<div *ngFor="let animal of animals" >
+<select (change)="onFilterChange($event.target.value)">
+  <option value="all">All</option>
+  <option value=">2">mature - above 2</option>
+  <option value="<2">young - below 2</option>
+</select>
+<div *ngFor="let animal of animals | age:filterValue" >
   <view-animal *ngIf="animal!==currentEditAnimal" [animal]="animal" (editAnimalEvent)="editAnimal($event)"></view-animal>
   <edit-animal *ngIf="animal===currentEditAnimal" [animal]="animal" (saveAnimalEvent)="saveAnimal()"></edit-animal>
 </div>
