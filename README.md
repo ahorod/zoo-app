@@ -1,7 +1,7 @@
 # ZooTracker
 #### Web app, 09.06.2017
 #### By Anna Horodetska
-Zoo tracjer is an application which allows to keep track of animals by recording their info, adding, editing, piping.
+Zoo tracker is an application which allows to keep track of animals by recording their info, adding, editing, piping.
 
 ## Planning
 1. Configuration/dependencies
@@ -54,7 +54,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 _HTML_
 
-_SCSS_
+_CSS_
 
 _Bootstrap_
 
